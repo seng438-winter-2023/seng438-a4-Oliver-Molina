@@ -1,0 +1,17 @@
+/bin/
+/.metadata/
+*.html
+*.jar
+*.class
+*.zip
+*.DS_Store
+*.properties
+*.js
+*.css
+*.jpg
+*.png
+*.lst
+*.classpath
+*.xml
+/media/
+/JFreeChart v3.0/Assignment3-artifacts/JFreeChart-ModifiedJavadoc/
