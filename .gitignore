@@ -1,7 +1,6 @@
 /bin/
 /.metadata/
 *.html
-*.jar
 *.class
 *.zip
 *.DS_Store
