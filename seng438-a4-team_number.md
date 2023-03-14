@@ -23,11 +23,12 @@ public boolean contains(double value)
 ```
 In this test case a negation of the lower bound still 
 resulted in the the same return value since since our test cases did not use large enough lower and upper bounds for such a bug to be noticed i.e Range.lower = 0.  
--  Post Incrementation/Decrementation in line 225 of Range.combine():  
+###  Post Incrementation/Decrementation in line 225 of Range.combine():  
 ```java
 return new Range(l, u)
 ```  
-### Post incrementation of the values l or u is not detected
+ Post incrementation of the values l or u is not detected since the operation is happening post construction of the return object, such an error should be irrelevant as the program stands but could cause errors with future iterations.
+
  ```java
 
  ```
