@@ -5,14 +5,34 @@
 | Group \#:      |     |
 | -------------- | --- |
 | Student Names: |     |
-|                |     |
+|      Oliver Molina          |     |
 |                |     |
 |                |     |
 
 # Introduction
-
+We do some things idk 
 
 # Analysis of 10 Mutants of the Range class 
+## __Survived__
+### Negated double field lower  
+```java
+public boolean contains(double value)  
+{
+        return (value >= this.lower && value <= this.upper);
+}
+```
+In this test case a negation of the lower bound still 
+resulted in the the same return value since since our test cases did not use large enough lower and upper bounds for such a bug to be noticed i.e Range.lower = 0.  
+-  Post Incrementation/Decrementation in line 225 of Range.combine():  
+```java
+return new Range(l, u)
+```  
+### Post incrementation of the values l or u is not detected
+ ```java
+
+ ```
+
+## __Killed__
 
 # Report all the statistics and the mutation score for each test class
 
