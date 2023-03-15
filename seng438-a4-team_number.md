@@ -28,11 +28,36 @@ resulted in the the same return value since since our test cases did not use lar
 return new Range(l, u)
 ```  
  Post incrementation of the values l or u is not detected since the operation is happening post construction of the return object, such an error should be irrelevant as the program stands but could cause errors with future iterations.
-
+### Change to conditional boundaries unoticed
  ```java
-
+    public static Range scale(Range base, double factor) {
+        ParamChecks.nullNotPermitted(base, "base");
+        if (factor < 0) {
+            throw new IllegalArgumentException("Negative 'factor' argument.");
+        }
+        return new Range(base.getLowerBound() * factor,
+                base.getUpperBound() * factor);
+    }
  ```
+Changes to the boundaries of factor are such as changing it to greater than or equal to are not caught with our tests, the set of inputs we run our test cases on should be expanded to include the such possible boundary conditions.
 
+### No coverage for value = 0 condition
+```java
+    private static double shiftWithNoZeroCrossing(double value, double delta) {
+        if (value > 0.0) {
+            return Math.max(value + delta, 0.0);
+        }
+        else if (value < 0.0) {
+            return Math.min(value + delta, 0.0);
+        }
+        else {
+            return value + delta;
+        }
+    }
+```
+In the last return line, any alterations to return  value + delta, are unnoticed as our test cases did not account for this case which could have resulted in major errors.
+
+### 
 ## __Killed__
 
 # Report all the statistics and the mutation score for each test class
