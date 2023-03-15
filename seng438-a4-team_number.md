@@ -57,7 +57,19 @@ Changes to the boundaries of factor are such as changing it to greater than or e
 ```
 In the last return line, any alterations to return  value + delta, are unnoticed as our test cases did not account for this case which could have resulted in major errors.
 
-### 
+### Replace int return with 0 for org/jfree/data/Range::hashCode
+```java
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(this.lower);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(this.upper);
+        result = 29 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
+```
+This test was designed to check for consistent hash code return values however it did not validate whether or not the values returned were infact the correct value.
 ## __Killed__
 
 # Report all the statistics and the mutation score for each test class
