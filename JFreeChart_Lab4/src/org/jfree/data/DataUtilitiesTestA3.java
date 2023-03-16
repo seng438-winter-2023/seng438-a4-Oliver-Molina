@@ -393,7 +393,7 @@ public class DataUtilitiesTestA3 extends DataUtilities {
 		
 		assertTrue("results should equal expected.\nresults: "+Arrays.toString(results)+"\nexpected: "+Arrays.toString(expected), Arrays.equals(expected, results));
 	}
-	
+
 	@Test
 	public void NoZeroKey_GetCumulativePercentages() {
 		Mockery mocking  = new Mockery();
