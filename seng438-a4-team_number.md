@@ -152,11 +152,62 @@ With this, the lower or upper variable are negated. This would make the the larg
 # Analysis drawn on the effectiveness of each of the test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+The effect of equivalent mutants has been to significantly decrease the mutation score of each of our test classes reducing the accuracy greatly. There are many surviving mutants where we can see that the function output is exactly identitical and a few possible methods for detecting equivalent mutants are as follow.
+## Possible Automatic Detection Systems
+1. Use Regex to identify common equivalent mutants i.e  
+x+=y -> x-=(-y)
+2. Partition functions into relevant and irrelevant sections i.e  
+post incrementaton of temporary variables
 
+## Common Equivalent Mutants
+### Post Incremnting local variables
+The large majority of equivalent mutants we have seen have been some form of this mutant. In such a case we would never see the effect of the mutation since the variable has already been using and its state is no longer important to the overall outcome of the program.
+#### Original
+```java
+    public Range(double lower, double upper) {
+        if (lower > upper) {
+            String msg = "Range(double, double): require lower (" + lower
+                + ") <= upper (" + upper + ").";
+            throw new IllegalArgumentException(msg);
+        }
+        this.lower = lower; 
+        this.upper = upper;
+    }
+```
+#### Mutant
+```java
+    public Range(double lower, double upper) {
+        if (lower > upper) {
+            String msg = "Range(double, double): require lower (" + lower
+                + ") <= upper (" + upper + ").";
+            throw new IllegalArgumentException(msg);
+        }
+        this.lower = lower++; 
+        this.upper = upper++;
+    }
+```
+### Negating Double Argument on NaN check
+In this mutant, changing the value of the argument has no bearing on the argument's data type so the outcome of the function call will never change.
+#### Original
+```java
+    public boolean isNaNRange() {
+        return Double.isNaN(this.lower) && Double.isNaN(this.upper);
+    }
+```
+#### Mutant
+```java
+    public boolean isNaNRange() {
+        return Double.isNaN(-this.lower) && Double.isNaN(-this.upper);
+    }
+```
 # A discussion of what could have been done to improve the mutation score of the test suites
-
+Some surviving mutants were a resulted from weak boundary testing that could be caught with a more advanced set of test preconditions.
+Other survivors resulted from our usage of getters to validate a tests outcome when the returned variable of the getter may have also been compromised by the mutation in question, a better practice would be to store the desired results prior to executing the sections of code we are subjecting to scrutiny. 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
-
+## Advantages
+Mutation testing does allow us to see how robust our test cases are with respect to small changes in the source code, this is especially helpful in highlighting the efficacy of our tests in managing boundary conditions. 
+## Disadvantages
+One major disadvantage of mutation testing is the significant time and resources required to conduct it, this time can be reduced through the eilimination of equiavlent mutants but even this process takes time.  
 # Explain your SELENUIM test case design process
 
 # Explain the use of assertions and checkpoints
