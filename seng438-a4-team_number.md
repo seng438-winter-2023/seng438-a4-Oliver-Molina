@@ -182,7 +182,7 @@ The large majority of equivalent mutants we have seen have been some form of thi
                 + ") <= upper (" + upper + ").";
             throw new IllegalArgumentException(msg);
         }
-        this.lower = lower++; 
+        this.lower = lower++; // <---
         this.upper = upper++;
     }
 ```
