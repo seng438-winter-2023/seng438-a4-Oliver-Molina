@@ -60,6 +60,79 @@ In the last return line, any alterations to return  value + delta, are unnoticed
 ### 
 ## __Killed__
 
+### Negated conditional 
+```java
+public static Range combine(Range range1, Range range2) {
+    if (range1 == null) {
+        return range2;
+    }
+    if (range2 == null) {
+        return range1;
+    }
+    double l = Math.min(range1.getLowerBound(), range2.getLowerBound());
+    double u = Math.max(range1.getUpperBound(), range2.getUpperBound());
+    return new Range(l, u);
+}
+```
+This is an example of a very simple mutation. In this tested injection, the PIT test changes `range2 == null` to `range2 != null`. It's pretty expected that a change like this would survive; however, it is important to test even small and obvious things to ensure the program is of high functionality as one would expect. The mutated bug is obviously killed as it will return range1 before being able actually combine the ranges.
+
+### Replaced boolean return value with false for org/jfree/data/Range::equals
+```java
+public boolean equals(Object obj) {
+    if (!(obj instanceof Range)) {
+        return false;
+    }
+    Range range = (Range) obj;
+    if (!(this.lower == range.lower)) {
+        return false;
+    }
+    if (!(this.upper == range.upper)) {
+        return false;
+    }
+    return true;
+}
+```
+This is another simply mutation. It replaces the final return value from `true` to `false`. While simple, this mutation is important because it ensures that the main outputs are tested by the suite.
+
+### Remove call to org/jfree/data/Range::\<init\>
+```java
+public static Range expand(Range range,
+                            double lowerMargin, double upperMargin) {
+    ParamChecks.nullNotPermitted(range, "range");
+    double length = range.getLength();
+    double lower = range.getLowerBound() - length * lowerMargin;
+    double upper = range.getUpperBound() + length * upperMargin;
+    if (lower > upper) {
+        lower = lower / 2.0 + upper / 2.0;
+        upper = lower;
+    }
+    return new Range(lower, upper);
+}
+```
+This mutation is a good example because it demonstrates a mutation where a core part of the code is removed. Upon removing the call to `Range(lower, upper)` it truly tests the boundaries of the functionality of the code. Not only is the return value essentially destroyed, the the use of the Range constructor is removed thus breaking the code. If a test case were to not catch this or this mutation were to have survived, it would demonstrate a massive breach in the stability of the program.
+
+### Replaced double subtraction with addition/division/multiplication/modulus
+```java
+public double getLength() {
+    return this.upper - this.lower;
+}
+```
+I grouped up multiple mutations here because they are very similar and do essentially the same thing, and are all killed in the same way. They replace the subtract operator `-` with either an addition `+`, division `/`, multiplication `*`, or modulus `%`. This ruins the mathematical equation that the subtraction is meant to return, and will not allow the mutation to survive.
+
+### Negated double local variable number 1 (or 3)
+```java
+public Range(double lower, double upper) {
+    if (lower > upper) {
+        String msg = "Range(double, double): require lower (" + lower
+            + ") <= upper (" + upper + ").";
+        throw new IllegalArgumentException(msg);
+    }
+    this.lower = lower;
+    this.upper = upper;
+}
+```
+With this, the lower or upper variable are negated. This would make the the larger variable smaller and vice versa. This would, in every case besides some 0s, cause the test case to fail if done properly. This is a great mutation as it tests the test case. 
+
 # Report all the statistics and the mutation score for each test class
 
 
