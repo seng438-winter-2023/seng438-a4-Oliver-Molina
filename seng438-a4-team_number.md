@@ -209,7 +209,7 @@ Other survivors resulted from our usage of getters to validate a tests outcome w
 ## Advantages
 Mutation testing does allow us to see how robust our test cases are with respect to small changes in the source code, this is especially helpful in highlighting the efficacy of our tests in managing boundary conditions. 
 ## Disadvantages
-One major disadvantage of mutation testing is the significant time and resources required to conduct it, this time can be reduced through the eilimination of equiavlent mutants but even this process takes time.  
+One major disadvantage of mutation testing is the significant time and resources required to conduct it, this time can be reduced through the eilimination of equivalent mutants but even this process takes time.  
 # Explain your SELENUIM test case design process
 
 # Explain the use of assertions and checkpoints
