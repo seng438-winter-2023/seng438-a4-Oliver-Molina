@@ -10,7 +10,9 @@
 |                |     |
 
 # Introduction
-We do some things idk 
+In our previous assignments our group has been tasked with testing the JFreeChart program using manual, exploratory, black-box and white-box testing methods. In this lab we will continue to expand our comprehensive testing of the program by employing mutation testing, which is when small modifications to the code are injected to intentionally cause problems in the form of mutants. Tests are designed around the mutated sections of code with the philosophy that tests that are able to cover small simple error will be able to catch more realistic and complex errors as well. To perform this mutation testing we use Pitest/Pitclipse to automate the creations of mutations and running mutation tests on a set of test cases with the end goal being increasing the mutation score and thus increasing the test coverage.
+
+As part of the assignment we also take a brief look into Web/GUI testing by using the Selenium IDE and Sikulix in Chrome on the Costco website to generate UI test case scripts and automate their execution. Selenium IDE records a series of inputs in a website and verifies that a tested sequence works as intended. Verification points are used to ensure the correct behavior occurs.
 
 # Analysis of 10 Mutants of the Range class 
 ## __Survived__
