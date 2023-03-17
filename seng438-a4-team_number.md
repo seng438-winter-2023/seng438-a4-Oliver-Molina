@@ -211,7 +211,7 @@ Mutation testing does allow us to see how robust our test cases are with respect
 ## Disadvantages
 One major disadvantage of mutation testing is the significant time and resources required to conduct it, this time can be reduced through the eilimination of equivalent mutants but even this process takes time.  
 # Explain your SELENUIM test case design process
-
+For our Selenium GUI testing we approached our test case design by thinking of the first functionalities a user would want to do with the site: search, view item, add to cart, etc. To design these test cases we simply got Selenium to record us using a specific feature of the site and then added a verification point to ensure the expected outcome occurred by checking if elements or present or by comparing values. We had a few constraints in testing a live website owned by a separate party and our scope of testing was limited, as described later in the Difficulties Encountered section.
 # Explain the use of assertions and checkpoints
 
 # how did you test each functionaity with different test data
