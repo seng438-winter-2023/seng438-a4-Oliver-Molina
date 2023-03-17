@@ -59,63 +59,18 @@
       "target": "998x883",
       "targets": [],
       "value": ""
-    }]
-  }, {
-    "id": "f5a8c428-2a8f-4b9b-a1c3-22421936cbd7",
-    "name": "search_gibberish",
-    "commands": [{
-      "id": "9f1a913e-49b1-40b5-8056-bc34f807bb2a",
-      "comment": "",
-      "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
     }, {
-      "id": "16f2ceb8-8338-4f78-b0af-53f5a421bfaa",
+      "id": "3dc60484-0f52-4371-a463-00173e668680",
       "comment": "",
-      "command": "setWindowSize",
-      "target": "998x883",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f59cf737-828c-45f3-b0a9-a624b44be296",
-      "comment": "",
-      "command": "click",
-      "target": "id=search-field",
+      "command": "verifyElementPresent",
+      "target": "xpath=//img[@alt='Nutella Spread, 3 kg']",
       "targets": [
-        ["id=search-field", "id"],
-        ["css=#search-field", "css:finder"],
-        ["xpath=//input[@id='search-field']", "xpath:attributes"],
-        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
-        ["xpath=//span[2]/input[2]", "xpath:position"]
+        ["css=.col-xs-6:nth-child(1) .img-responsive", "css:finder"],
+        ["xpath=//img[@alt='Nutella Spread, 3 kg']", "xpath:img"],
+        ["xpath=//div[@id='search-results']/div[4]/div/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/img", "xpath:position"]
       ],
       "value": ""
-    }, {
-      "id": "c4d2c0cf-d6c0-454f-9220-0a8891325575",
-      "comment": "",
-      "command": "type",
-      "target": "id=search-field",
-      "targets": [
-        ["id=search-field", "id"],
-        ["css=#search-field", "css:finder"],
-        ["xpath=//input[@id='search-field']", "xpath:attributes"],
-        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
-        ["xpath=//span[2]/input[2]", "xpath:position"]
-      ],
-      "value": "rhbefjfkkhjfwhewf"
-    }, {
-      "id": "3ee2381c-9872-47da-9764-fefa8d6139ec",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=search-field",
-      "targets": [
-        ["id=search-field", "id"],
-        ["css=#search-field", "css:finder"],
-        ["xpath=//input[@id='search-field']", "xpath:attributes"],
-        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
-        ["xpath=//span[2]/input[2]", "xpath:position"]
-      ],
-      "value": "${KEY_ENTER}"
     }]
   }, {
     "id": "b3a829b5-f59f-425d-bddd-608a0fa52a38",
@@ -158,6 +113,13 @@
         ["xpath=//form[@id='formcatsearch']/div[2]/button", "xpath:idRelative"],
         ["xpath=//button", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "8c8319f7-7f0f-4a3a-b23f-f1ceebc7c843",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Welcome to Costco Wholesale",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -234,25 +196,16 @@
       ],
       "value": ""
     }, {
-      "id": "fd105dd2-1fdc-47b3-b8c6-71b795f64589",
+      "id": "2a27ce1e-7440-4345-80dd-4c253a822123",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=.co-collapse",
+      "command": "verifyElementPresent",
+      "target": "id=product-error",
       "targets": [
-        ["css=.co-collapse", "css:finder"],
-        ["xpath=//button[@id='minusQty']/em", "xpath:idRelative"],
-        ["xpath=//ul/div/div/button/em", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f2951e31-92c6-4edb-ac7c-22420a2fb5cb",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.co-collapse",
-      "targets": [
-        ["css=.co-collapse", "css:finder"],
-        ["xpath=//button[@id='minusQty']/em", "xpath:idRelative"],
-        ["xpath=//ul/div/div/button/em", "xpath:position"]
+        ["id=product-error", "id"],
+        ["css=#product-error", "css:finder"],
+        ["xpath=//div[@id='product-error']", "xpath:attributes"],
+        ["xpath=//div[@id='qty-input']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/div/div[2]", "xpath:position"]
       ],
       "value": ""
     }]
@@ -260,21 +213,21 @@
     "id": "21430226-83f6-4a1f-b541-9d4b6e055db7",
     "name": "add-one-to-cart",
     "commands": [{
-      "id": "8d1fdce1-74b9-4283-b433-cbb3b62f8e62",
+      "id": "09bc48ed-b877-48b4-bd8b-db57afa4e314",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "5dc8dc35-a975-4f69-b45e-c3272aad6f8b",
+      "id": "95698509-82f8-4f44-ac28-d00c6c7c4543",
       "comment": "",
       "command": "setWindowSize",
       "target": "998x883",
       "targets": [],
       "value": ""
     }, {
-      "id": "c9192fe1-5407-4733-9f28-7384007306a3",
+      "id": "df0172e4-5aa3-48e1-bde0-f450f02b8e7c",
       "comment": "",
       "command": "click",
       "target": "id=search-field",
@@ -287,7 +240,7 @@
       ],
       "value": ""
     }, {
-      "id": "1c9d961e-254f-4798-8133-9cba0e397bac",
+      "id": "0ca1da33-048c-4cb8-a03d-b4e45c0d3cda",
       "comment": "",
       "command": "type",
       "target": "id=search-field",
@@ -298,9 +251,9 @@
         ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
         ["xpath=//span[2]/input[2]", "xpath:position"]
       ],
-      "value": "nutella"
+      "value": "bagels"
     }, {
-      "id": "ec1aab80-39c7-481e-bbd6-f16df739380d",
+      "id": "86bfde3e-9727-4155-bfb8-06f8bc6074ef",
       "comment": "",
       "command": "sendKeys",
       "target": "id=search-field",
@@ -313,19 +266,19 @@
       ],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "94b2b091-ad2a-4f5c-946a-e21ea6e6818a",
+      "id": "d566436a-6780-44ad-85e4-51bf36e7c466",
       "comment": "",
       "command": "click",
-      "target": "css=.col-xs-6:nth-child(1) .img-responsive",
+      "target": "css=.product:nth-child(2) .img-responsive",
       "targets": [
-        ["css=.col-xs-6:nth-child(1) .img-responsive", "css:finder"],
-        ["xpath=//img[@alt='Nutella Spread, 3 kg']", "xpath:img"],
-        ["xpath=//div[@id='search-results']/div[4]/div/div/div[2]/div/a/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/a/img", "xpath:position"]
+        ["css=.product:nth-child(2) .img-responsive", "css:finder"],
+        ["xpath=//img[@alt='Cuisinart Digital Air Fryer Convection Toaster Oven']", "xpath:img"],
+        ["xpath=//div[@id='search-results']/div[4]/div[2]/div/div[2]/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/a/img", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "00dc0994-7912-4a01-89ec-616b427a2ec0",
+      "id": "6f252532-63d2-4f83-8f11-91d2b1f8228b",
       "comment": "",
       "command": "click",
       "target": "id=add-to-cart-btn",
@@ -339,7 +292,7 @@
       ],
       "value": ""
     }, {
-      "id": "c534d12d-c56f-4e87-a0c6-a7c2a3586022",
+      "id": "249ad198-4a00-482c-9b11-0cfa53134a4f",
       "comment": "",
       "command": "click",
       "target": "css=a > .btn",
@@ -348,6 +301,32 @@
         ["xpath=//div[@id='costcoModalText']/div[2]/div[2]/a/button", "xpath:idRelative"],
         ["xpath=//a/button", "xpath:position"],
         ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c599afed-d47f-44fb-9908-c6aeaaeb19c2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=order-item_1",
+      "targets": [
+        ["id=order-item_1", "id"],
+        ["css=#order-item_1", "css:finder"],
+        ["xpath=//div[@id='order-item_1']", "xpath:attributes"],
+        ["xpath=//div[@id='order-items-regular']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90ef0988-35fe-464d-a4c1-7f59b23984e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.remove-link > .h8-style-guide-link",
+      "targets": [
+        ["css=.remove-link > .h8-style-guide-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='order-item_1']/div/div/div[2]/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
       ],
       "value": ""
     }]
@@ -449,14 +428,13 @@
       "id": "043fb8db-00d0-4663-b6d4-0cabd9d083ab",
       "comment": "",
       "command": "click",
-      "target": "css=#remove-serial_1926733721",
+      "target": "css=.col-xl-offset-3 > .h8-style-guide-link",
       "targets": [
-        ["id=remove-serial_1926733721", "id"],
-        ["css=#remove-serial_1926733721", "css:finder"],
-        ["xpath=//span[@id='remove-serial_1926733721']", "xpath:attributes"],
-        ["xpath=//div[@id='order-item_1']/div/div[3]/div/div/div/div/button/span", "xpath:idRelative"],
-        ["xpath=//div/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
+        ["css=.col-xl-offset-3 > .h8-style-guide-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='order-item_1']/div/div[3]/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
       ],
       "value": ""
     }]
@@ -464,21 +442,21 @@
     "id": "df8f9be8-8e45-470e-92f4-8a2d55a4be6f",
     "name": "add-quantity-in-cart",
     "commands": [{
-      "id": "1c13da84-44d8-45d2-8562-ebca14d7bcb7",
+      "id": "cd3fae8e-c2b4-4caa-bfca-910e5d8b6f38",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "83874e99-7d7e-4644-986d-fec7f79b0bb9",
+      "id": "481757ef-7aa9-4f5f-a9ca-016c380c0fce",
       "comment": "",
       "command": "setWindowSize",
       "target": "998x883",
       "targets": [],
       "value": ""
     }, {
-      "id": "bb9aa3bf-4b71-42b9-a528-5508e11ce8d0",
+      "id": "7a20cd7a-6ef3-4910-bec5-79ebd63d4fe8",
       "comment": "",
       "command": "click",
       "target": "id=search-field",
@@ -491,7 +469,7 @@
       ],
       "value": ""
     }, {
-      "id": "470a846f-50fc-4c5c-b936-c9698c8580fe",
+      "id": "4728a586-ef1f-46c4-becf-19b94608135d",
       "comment": "",
       "command": "type",
       "target": "id=search-field",
@@ -504,7 +482,7 @@
       ],
       "value": "cereal"
     }, {
-      "id": "7e0ba160-c0a5-4ed5-b0cd-1737df8a1524",
+      "id": "2031a59f-a66a-4289-a513-0ea7a285741e",
       "comment": "",
       "command": "sendKeys",
       "target": "id=search-field",
@@ -517,126 +495,283 @@
       ],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "4da23e4a-78db-4f1a-8d45-808933e2fc50",
+      "id": "9db01628-d89f-4cde-9432-ddc76a660dda",
       "comment": "",
       "command": "click",
-      "target": "css=.col-xs-6:nth-child(2) .img-responsive",
+      "target": "id=addbutton-0",
       "targets": [
-        ["css=.col-xs-6:nth-child(2) .img-responsive", "css:finder"],
-        ["xpath=//img[@alt='General Mills Cheerios, 1 kg']", "xpath:img"],
-        ["xpath=//div[@id='search-results']/div[4]/div[2]/div/div[2]/div/a/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div[2]/div/a/img", "xpath:position"]
+        ["id=addbutton-0", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#addbutton-0", "css:finder"],
+        ["xpath=//button[@id='addbutton-0']", "xpath:attributes"],
+        ["xpath=//div[@id='addButtonContainer-0']/button", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "aa13d5d1-64cc-4b73-8ba0-79eec222afb9",
+      "id": "6909ffa7-977c-477e-98b4-339ddc5ce75d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cart-t > .top-button-title",
+      "targets": [
+        ["css=#cart-t > .top-button-title", "css:finder"],
+        ["xpath=//a[@id='cart-t']/span", "xpath:idRelative"],
+        ["xpath=//div[5]/nav/ul/li[3]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63589d54-442a-4afe-88c5-00d4c6d1b0e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#add-1 > img",
+      "targets": [
+        ["css=#add-1 > img", "css:finder"],
+        ["xpath=//button[@id='add-1']/img", "xpath:idRelative"],
+        ["xpath=//button[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d18b0f29-feb2-48ec-ab55-fc5daa8e18b0",
       "comment": "",
       "command": "mouseOver",
-      "target": "id=add-to-cart-btn",
-      "targets": [
-        ["id=add-to-cart-btn", "id"],
-        ["name=add-to-cart", "name"],
-        ["css=#add-to-cart-btn", "css:finder"],
-        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
-        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
-        ["xpath=//ul/div[2]/input", "xpath:position"]
-      ],
+      "target": "id=quantity_1",
+      "targets": [],
       "value": ""
     }, {
-      "id": "22bce501-33c0-4376-b17b-4560e4deb8b5",
+      "id": "0609d9df-3327-4d5d-bce5-052c4529c169",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=quantity_1",
+      "targets": [],
+      "value": "2"
+    }, {
+      "id": "6993124a-d6c6-4f52-8984-678fbf7a80e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xl-offset-3 > .h8-style-guide-link",
+      "targets": [
+        ["css=.col-xl-offset-3 > .h8-style-guide-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='order-item_1']/div/div[3]/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8114982b-4d86-4f2b-af3a-2180d010396b",
+    "name": "change-to-french",
+    "commands": [{
+      "id": "2be547a8-b29c-499f-a8dd-3c9c053b74cb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "525e4d1a-cdef-479b-93fe-df8efdda47c9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x917",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a0fec76-52d6-4fd8-b380-8ce3a24dab42",
       "comment": "",
       "command": "mouseOver",
-      "target": "id=add-to-cart-btn",
+      "target": "id=customer-service-link",
       "targets": [
-        ["id=add-to-cart-btn", "id"],
-        ["name=add-to-cart", "name"],
-        ["css=#add-to-cart-btn", "css:finder"],
-        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
-        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
-        ["xpath=//ul/div[2]/input", "xpath:position"]
+        ["id=customer-service-link", "id"],
+        ["linkText=Customer Service", "linkText"],
+        ["css=#customer-service-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Customer Service')]", "xpath:link"],
+        ["xpath=//a[@id='customer-service-link']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://customerservice.costco.ca/en')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Customer Service')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "c85823a2-6dfa-4a0f-9f9f-7cb75ab6377f",
-      "comment": "",
-      "command": "click",
-      "target": "css=.co-expand",
-      "targets": [
-        ["css=.co-expand", "css:finder"],
-        ["xpath=//button[@id='plusQty']/em", "xpath:idRelative"],
-        ["xpath=//button[2]/em", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c1386fdb-3f77-4533-94b1-ecbac716c9b1",
-      "comment": "",
-      "command": "click",
-      "target": "id=add-to-cart-btn",
-      "targets": [
-        ["id=add-to-cart-btn", "id"],
-        ["name=add-to-cart", "name"],
-        ["css=#add-to-cart-btn", "css:finder"],
-        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
-        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
-        ["xpath=//ul/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "27d839a3-e701-4cf0-8609-6c12d1ba0fb0",
-      "comment": "",
-      "command": "click",
-      "target": "css=a > .btn",
-      "targets": [
-        ["css=a > .btn", "css:finder"],
-        ["xpath=//div[@id='costcoModalText']/div[2]/div[2]/a/button", "xpath:idRelative"],
-        ["xpath=//a/button", "xpath:position"],
-        ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "383986a4-086c-4c8f-9a76-9a3298d430e4",
-      "comment": "",
-      "command": "click",
-      "target": "css=#add-2 > img",
-      "targets": [
-        ["css=#add-2 > img", "css:finder"],
-        ["xpath=//button[@id='add-2']/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div[2]/div/div/button[2]/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3f9ecadf-db17-44ba-a75b-3b41ca555099",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#add-2 > img",
-      "targets": [
-        ["css=#add-2 > img", "css:finder"],
-        ["xpath=//button[@id='add-2']/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div[2]/div/div/button[2]/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "9f39b441-45d7-47ce-b309-80dee9ec12ff",
+      "id": "d3577d6b-6caf-4b74-a6a8-18c3b8616a00",
       "comment": "",
       "command": "mouseOut",
-      "target": "css=#add-2 > img",
+      "target": "id=customer-service-link",
       "targets": [
-        ["css=#add-2 > img", "css:finder"],
-        ["xpath=//button[@id='add-2']/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div[2]/div/div/button[2]/img", "xpath:position"]
+        ["id=customer-service-link", "id"],
+        ["linkText=Customer Service", "linkText"],
+        ["css=#customer-service-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Customer Service')]", "xpath:link"],
+        ["xpath=//a[@id='customer-service-link']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://customerservice.costco.ca/en')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Customer Service')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "5aa78c98-4d00-49c6-ba93-158290d973ea",
+      "id": "d6cf997d-84c3-4582-ac56-0f0a54828f46",
       "comment": "",
       "command": "click",
-      "target": "id=sub-2",
+      "target": "linkText=Français",
       "targets": [
-        ["id=sub-2", "id"],
-        ["css=#sub-2", "css:finder"],
-        ["xpath=//button[@id='sub-2']", "xpath:attributes"],
-        ["xpath=//div[@id='order-item_2']/div/div/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div[2]/div/div/button", "xpath:position"]
+        ["linkText=Français", "linkText"],
+        ["css=#language-select-popover-container li:nth-child(2) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Français')]", "xpath:link"],
+        ["xpath=//div[@id='language-select-popover-container']/ul/li[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[4]", "xpath:href"],
+        ["xpath=//li[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Français')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "969845d4-8214-42e8-802f-a7dc1b6c1b1b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=header-selected-language",
+      "targets": [
+        ["id=header-selected-language", "id"],
+        ["css=#header-selected-language", "css:finder"],
+        ["xpath=//span[@id='header-selected-language']", "xpath:attributes"],
+        ["xpath=//a[@id='language-select']/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'FR')]", "xpath:innerText"]
+      ],
+      "value": "FR"
+    }]
+  }, {
+    "id": "5545ecce-8311-440f-82ca-26f42ffb17f1",
+    "name": "view-reviews",
+    "commands": [{
+      "id": "3793797f-52ff-4082-8941-b0a8f30d2415",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9af436fc-d9d5-4fbd-9e95-34b43126c5ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x917",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "339e360d-4c18-4ec2-9bbe-07e372eead28",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5be763cd-bd4b-40a3-9c9d-120dc92c9353",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "tv"
+    }, {
+      "id": "2a9ea030-e841-4389-94bd-708c4c99764f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "092d1369-293d-451e-a063-b1b474bbc95f",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-5107043",
+      "targets": [
+        ["id=price-5107043", "id"],
+        ["css=#price-5107043", "css:finder"],
+        ["xpath=//div[@id='price-5107043']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/div[2]/div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4d716d2-8ad9-4f0d-b8d7-89d051874c96",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#details-bazaar-voice #ratings-summary",
+      "targets": [
+        ["css=#details-bazaar-voice #ratings-summary", "css:finder"],
+        ["xpath=(//button[@id='ratings-summary'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='details-bazaar-voice']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1fb04a6-0aa2-44e1-89ce-07744f691f0c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#details-bazaar-voice #ratings-summary",
+      "targets": [
+        ["css=#details-bazaar-voice #ratings-summary", "css:finder"],
+        ["xpath=(//button[@id='ratings-summary'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='details-bazaar-voice']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddd29f86-f60b-4820-bf54-ddf3997c6c61",
+      "comment": "",
+      "command": "click",
+      "target": "css=#details-bazaar-voice .bv_numReviews_text",
+      "targets": [
+        ["css=#details-bazaar-voice .bv_numReviews_text", "css:finder"],
+        ["xpath=(//button[@id='ratings-summary']/div[3]/div)[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/button/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72691c14-2d2c-4bb7-b1ee-14a8c952c2a5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3530)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df518b7d-f5ad-48b8-9dfb-4ebe8beb5c7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-pdp-tab-header-12 .secondary-button-v2",
+      "targets": [
+        ["css=#nav-pdp-tab-header-12 .secondary-button-v2", "css:finder"],
+        ["xpath=(//input[@name='view-more'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='nav-pdp-tab-header-12']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1dcf9ae5-51a8-47b6-aae3-70e0b4a2c11c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.bv-write-review",
+      "targets": [
+        ["css=.bv-write-review", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='BVRRContainer']/div/div/div/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div/div/div/div/div/div/div/button", "xpath:position"]
       ],
       "value": ""
     }]
