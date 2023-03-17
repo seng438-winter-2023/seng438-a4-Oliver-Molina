@@ -123,6 +123,15 @@ public class RangeTestA3 {
     	assertNull("The combined range should be null", Range.combine(null, null));
     }
     
+    @Test
+    public void CombineIdentical() throws Exception {
+    	Range r1 = new Range(1, 2);
+		Range r2 = new Range(1, 2);
+		Range result = Range.combine(r1, r2);
+		Range expected = new Range(1, 2);
+    	assertEquals("The combined range should be 1, 2", result, expected);
+    }
+    
     // Testing method combineIgnoringNaN(Range range1, Range range2)
     
 	/*
@@ -246,6 +255,28 @@ public class RangeTestA3 {
     	assertEquals("The expected value was 0.0 but the returned value was " + constrainValue, 0.0, constrainValue, .000000001d);
     }
     
+    @Test
+    public void ConstrainCloseValues() throws Exception {
+    	Range tr = new Range(3,4);
+    	double[] expected = {4.0,4.0,3.0,3.0};
+    	double[] results = new double[4];
+    	results[0] = tr.constrain(5);
+    	results[1] = tr.constrain(4);
+    	results[2] = tr.constrain(3);
+    	results[3] = tr.constrain(2);
+    	
+    	String resS = "";
+    	boolean good = true;
+    	for(int i=0; i<4; i++) {
+    		if(results[i] != expected[i]) {
+    			good = false;
+    		}
+    		resS = Double.toString(results[i]) + " ";
+    	}
+    	
+    	assertTrue("mutant test failed, got "+resS, good);
+    }
+    
     //Testing method intersects(double b0, double b1)
     
     @Test
@@ -265,16 +296,42 @@ public class RangeTestA3 {
     
     //Testing method intersects(range)
 
-    /*// REMOVED FOR MUTATION GREEN TEST SUITE
+
     @Test 
     public void IntersectReturnsTrueForIntersectingRange() {
-    	assertTrue("Intersects should return true for overlapping range", range3.intersects(range1));
+    	Range tr = new Range(1,10);
+    	Range tr2 = new Range(5,15);
+    	assertTrue("Intersects should return true for overlapping range", tr.intersects(tr2));
     }
-    */
+    
     
     @Test
     public void IntersectReturnsFalseForNonIntersectingRange() {
     	assertFalse("Intersect should return false for non intersecting range",range3.intersects(range2));
+    }
+    
+    @Test
+    public void IntersectCloseValues() {
+    	Range tr = new Range(3,5);
+    	Range tr2 = new Range(4,5);
+    	
+    	assertTrue(tr.intersects(tr2));
+    }
+    
+    @Test
+    public void IntersectMatchingValues() {
+    	Range tr = new Range(4,5);
+    	Range tr2 = new Range(4,5);
+    	
+    	assertTrue(tr.intersects(tr2));
+    }
+    
+    @Test
+    public void IntersectTouchingBoundariesFalse() {
+    	Range tr = new Range(3,5);
+    	Range tr2 = new Range(5,6);
+    	
+    	assertFalse(tr.intersects(tr2));
     }
     
     // Testing method contains(double value)
@@ -314,7 +371,7 @@ public class RangeTestA3 {
     @Test
     public void EqualsSimilarRangeObject() throws Exception {
     	Range range1Similar = new Range(-1, 1);
-    	assertTrue("The equals method should be returning false on equivalent ranges.", range1.equals(range1Similar));
+    	assertTrue("The equals method should be returning true on equivalent ranges.", range1.equals(range1Similar));
     }
     
     @Test
