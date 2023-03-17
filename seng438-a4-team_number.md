@@ -213,14 +213,24 @@ One major disadvantage of mutation testing is the significant time and resources
 # Explain your SELENUIM test case design process
 For our Selenium GUI testing we approached our test case design by thinking of the first functionalities a user would want to do with the site: search, view item, add to cart, etc. To design these test cases we simply got Selenium to record us using a specific feature of the site and then added a verification point to ensure the expected outcome occurred by checking if elements or present or by comparing values. We had a few constraints in testing a live website owned by a separate party and our scope of testing was limited, as described later in the Difficulties Encountered section.
 # Explain the use of assertions and checkpoints
+To ensure that a GUI test produced a correct result we can target a specific aspect of the web page and perform assertion (aka checkpoint) operations that cause the test to fail if a certain condition is or isn't met. When recording test cases it is important to have a clear pass condition and the various "verify" commands in Selenium IDE serve as traditional assert statements seen within test cases. There are many different types of assertions for a web GUI but for our testing purposed we mostly used assertions that verify if a value, page title, or if an element exists to ensure the correct page is reached.
+
+In cases where the tester must verify the assertions manually rather than automatically with assertions, breakpoints may be used to freeze and continue the script after a select point. The tester can verify the information themselves before proceeding.
 
 # how did you test each functionaity with different test data
+For the purposes of testing the Costco website we had to perform set-up for each test case to get the data we wanted in place, such as adding items to our cart before testing if we can remove them. In cases where items are added, the captured input recording removes the items from the cart after the test assertion to ensure Selenium captures and replays the necessary operations for both set-up and clean-up to ensure each operation can run in succession of each other with minimal hassle. Each test resets any changes they make to the shopping cart by clearing the item used and thus different test data isn't really required, although we used unique test data in the form of different items added to the cart regardless. No manual assertions were used.
+
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+Selenium checks individual elements and properties of a page with assertion commands while Sikulix captures an image screenshot of the page and compares it to the current page to validate a web page GUI's state. Both IDEs have their advantages and disadvantages: to start, Sikulix is able to capture and interact with elements that arent present within the page's code itself such as HTML5 elements or embeds like games or videos while Selenium can't as it is restricted to interacting with page elements within the website's HTML code. In terms of script capturing, both have a very similar workflow with the main difference coming in the assertions: Selenium must assert individual elements and often elements can be hard to access or hidden behind other elements whereas Sikulix's screen capture is able to identify GUI components on its own without human selection. However, the image processing could be inaccurate or elements could be blocked and unable to be captured by it whereas Selenium is much more explicit with what it asks for.
 
 # How the team work/effort was divided and managed
-
+-equally (lul)
 
 # Difficulties encountered, challenges overcome, and lessons learned
+GUI
+-selecting elements / selenium assertions can be difficult to get working properly
+-inability to test certain features, ex login or anything that submits a form (the site is live!!!)
 
 # Comments/feedback on the lab itself
+:thumb:
