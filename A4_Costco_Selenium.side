@@ -1,0 +1,654 @@
+{
+  "id": "dbf832ec-fe58-4517-9050-fb8c711bc2c0",
+  "version": "2.0",
+  "name": "Assignment4",
+  "url": "https://www.costco.ca",
+  "tests": [{
+    "id": "1f3f8829-e034-4cc9-b8b4-b377519d037e",
+    "name": "search_item",
+    "commands": [{
+      "id": "d4df6773-19b7-4310-9e74-a17844255837",
+      "comment": "",
+      "command": "open",
+      "target": "/?langId=-24",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eba4c3a7-3c92-4c8b-843d-7e13638ef8ce",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "400fa845-f16b-4426-8376-ad90e220a44e",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "nutella"
+    }, {
+      "id": "b4598695-a548-49cc-b46c-1226bef55f41",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e842ca1d-a519-4904-b033-6b86ea229b2b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x883",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f5a8c428-2a8f-4b9b-a1c3-22421936cbd7",
+    "name": "search_gibberish",
+    "commands": [{
+      "id": "9f1a913e-49b1-40b5-8056-bc34f807bb2a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16f2ceb8-8338-4f78-b0af-53f5a421bfaa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x883",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f59cf737-828c-45f3-b0a9-a624b44be296",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4d2c0cf-d6c0-454f-9220-0a8891325575",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "rhbefjfkkhjfwhewf"
+    }, {
+      "id": "3ee2381c-9872-47da-9764-fefa8d6139ec",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }, {
+    "id": "b3a829b5-f59f-425d-bddd-608a0fa52a38",
+    "name": "search_empty",
+    "commands": [{
+      "id": "ea996750-00c6-4ecd-a2ce-4c07975029f7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aec144cc-df1c-4490-9f01-4e007f1e7f08",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x883",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3415fa49-5f74-4bbc-878c-a621e0658c34",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6c894ec-0039-4ee4-8d04-c4e949ddc721",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0ebb4b4d-f023-450e-9f19-05008db82eb6",
+    "name": "add-zero-to-cart",
+    "commands": [{
+      "id": "4ffcf97f-d576-4796-8eeb-b1d858bd54aa",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95b8e3ca-b66d-4068-86c5-89a78d053bb0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x883",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c253890-52b8-4834-878c-a09a9bea8655",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "nutella"
+    }, {
+      "id": "30085999-9141-4a43-b66f-4289ec946e52",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "77b3d1c6-c22f-4003-814b-7f3750a677cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-6:nth-child(1) .img-responsive",
+      "targets": [
+        ["css=.col-xs-6:nth-child(1) .img-responsive", "css:finder"],
+        ["xpath=//img[@alt='Nutella Spread, 3 kg']", "xpath:img"],
+        ["xpath=//div[@id='search-results']/div[4]/div/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1a224b9-2610-43de-abeb-3236440d9619",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,189)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "665322fc-1304-494b-80fb-6a00c5bd341b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.co-collapse",
+      "targets": [
+        ["css=.co-collapse", "css:finder"],
+        ["xpath=//button[@id='minusQty']/em", "xpath:idRelative"],
+        ["xpath=//ul/div/div/button/em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd105dd2-1fdc-47b3-b8c6-71b795f64589",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.co-collapse",
+      "targets": [
+        ["css=.co-collapse", "css:finder"],
+        ["xpath=//button[@id='minusQty']/em", "xpath:idRelative"],
+        ["xpath=//ul/div/div/button/em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2951e31-92c6-4edb-ac7c-22420a2fb5cb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.co-collapse",
+      "targets": [
+        ["css=.co-collapse", "css:finder"],
+        ["xpath=//button[@id='minusQty']/em", "xpath:idRelative"],
+        ["xpath=//ul/div/div/button/em", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "21430226-83f6-4a1f-b541-9d4b6e055db7",
+    "name": "add-one-to-cart",
+    "commands": [{
+      "id": "8d1fdce1-74b9-4283-b433-cbb3b62f8e62",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5dc8dc35-a975-4f69-b45e-c3272aad6f8b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x883",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9192fe1-5407-4733-9f28-7384007306a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c9d961e-254f-4798-8133-9cba0e397bac",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "nutella"
+    }, {
+      "id": "ec1aab80-39c7-481e-bbd6-f16df739380d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "94b2b091-ad2a-4f5c-946a-e21ea6e6818a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-6:nth-child(1) .img-responsive",
+      "targets": [
+        ["css=.col-xs-6:nth-child(1) .img-responsive", "css:finder"],
+        ["xpath=//img[@alt='Nutella Spread, 3 kg']", "xpath:img"],
+        ["xpath=//div[@id='search-results']/div[4]/div/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00dc0994-7912-4a01-89ec-616b427a2ec0",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-btn",
+      "targets": [
+        ["id=add-to-cart-btn", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#add-to-cart-btn", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
+        ["xpath=//ul/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c534d12d-c56f-4e87-a0c6-a7c2a3586022",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .btn",
+      "targets": [
+        ["css=a > .btn", "css:finder"],
+        ["xpath=//div[@id='costcoModalText']/div[2]/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3629c656-02b3-41e3-8de5-9335b7c91492",
+    "name": "add-and-remove-from-cart",
+    "commands": [{
+      "id": "810dfcb6-b099-484b-ab9c-c27759ff2a5e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa167851-e081-499a-b47d-ca3c869973d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x883",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a930ee80-1a25-4ffb-81e6-0d1f948ebb29",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "45da3a1d-3289-455d-9b4c-8eb02d23b85b",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "granola bar"
+    }, {
+      "id": "d9f00e0e-5807-47b7-a961-23affb7bbae5",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "492e0c29-6229-40d8-9923-2b39778b514f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-6:nth-child(1) .img-responsive",
+      "targets": [
+        ["css=.col-xs-6:nth-child(1) .img-responsive", "css:finder"],
+        ["xpath=//img[@alt='Quaker Yogurt Granola Bars, 34-count']", "xpath:img"],
+        ["xpath=//div[@id='search-results']/div[4]/div/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c2aaaf4-760d-4bcc-a8ba-846138b8c67f",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-btn",
+      "targets": [
+        ["id=add-to-cart-btn", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#add-to-cart-btn", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
+        ["xpath=//ul/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "570a3c0e-decc-40ba-b294-9d1a83d06919",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .btn",
+      "targets": [
+        ["css=a > .btn", "css:finder"],
+        ["xpath=//div[@id='costcoModalText']/div[2]/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "043fb8db-00d0-4663-b6d4-0cabd9d083ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=#remove-serial_1926733721",
+      "targets": [
+        ["id=remove-serial_1926733721", "id"],
+        ["css=#remove-serial_1926733721", "css:finder"],
+        ["xpath=//span[@id='remove-serial_1926733721']", "xpath:attributes"],
+        ["xpath=//div[@id='order-item_1']/div/div[3]/div/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "df8f9be8-8e45-470e-92f4-8a2d55a4be6f",
+    "name": "add-quantity-in-cart",
+    "commands": [{
+      "id": "1c13da84-44d8-45d2-8562-ebca14d7bcb7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83874e99-7d7e-4644-986d-fec7f79b0bb9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "998x883",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb9aa3bf-4b71-42b9-a528-5508e11ce8d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "470a846f-50fc-4c5c-b936-c9698c8580fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "cereal"
+    }, {
+      "id": "7e0ba160-c0a5-4ed5-b0cd-1737df8a1524",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "4da23e4a-78db-4f1a-8d45-808933e2fc50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-6:nth-child(2) .img-responsive",
+      "targets": [
+        ["css=.col-xs-6:nth-child(2) .img-responsive", "css:finder"],
+        ["xpath=//img[@alt='General Mills Cheerios, 1 kg']", "xpath:img"],
+        ["xpath=//div[@id='search-results']/div[4]/div[2]/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa13d5d1-64cc-4b73-8ba0-79eec222afb9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=add-to-cart-btn",
+      "targets": [
+        ["id=add-to-cart-btn", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#add-to-cart-btn", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
+        ["xpath=//ul/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22bce501-33c0-4376-b17b-4560e4deb8b5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=add-to-cart-btn",
+      "targets": [
+        ["id=add-to-cart-btn", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#add-to-cart-btn", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
+        ["xpath=//ul/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c85823a2-6dfa-4a0f-9f9f-7cb75ab6377f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.co-expand",
+      "targets": [
+        ["css=.co-expand", "css:finder"],
+        ["xpath=//button[@id='plusQty']/em", "xpath:idRelative"],
+        ["xpath=//button[2]/em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1386fdb-3f77-4533-94b1-ecbac716c9b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-btn",
+      "targets": [
+        ["id=add-to-cart-btn", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#add-to-cart-btn", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
+        ["xpath=//ul/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27d839a3-e701-4cf0-8609-6c12d1ba0fb0",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .btn",
+      "targets": [
+        ["css=a > .btn", "css:finder"],
+        ["xpath=//div[@id='costcoModalText']/div[2]/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "383986a4-086c-4c8f-9a76-9a3298d430e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#add-2 > img",
+      "targets": [
+        ["css=#add-2 > img", "css:finder"],
+        ["xpath=//button[@id='add-2']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/div/button[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f9ecadf-db17-44ba-a75b-3b41ca555099",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#add-2 > img",
+      "targets": [
+        ["css=#add-2 > img", "css:finder"],
+        ["xpath=//button[@id='add-2']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/div/button[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f39b441-45d7-47ce-b309-80dee9ec12ff",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#add-2 > img",
+      "targets": [
+        ["css=#add-2 > img", "css:finder"],
+        ["xpath=//button[@id='add-2']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/div/button[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5aa78c98-4d00-49c6-ba93-158290d973ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=sub-2",
+      "targets": [
+        ["id=sub-2", "id"],
+        ["css=#sub-2", "css:finder"],
+        ["xpath=//button[@id='sub-2']", "xpath:attributes"],
+        ["xpath=//div[@id='order-item_2']/div/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "024813b0-99fc-4376-b8e1-09994604736d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1f3f8829-e034-4cc9-b8b4-b377519d037e"]
+  }],
+  "urls": ["https://www.costco.ca/"],
+  "plugins": []
+}
