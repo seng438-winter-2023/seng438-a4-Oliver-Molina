@@ -153,6 +153,7 @@ With this, the lower or upper variable are negated. This would make the the larg
 ![](./RangePITSummary.png)
 
 ## RangeA4
+We successfully increase the strength by over 10% by adding more coverage as well as doing stronger boundary testing. 
 ![](./RangePIT2.png)
 
 ## DataUtilitiesA3
@@ -167,6 +168,8 @@ Throughout some extra test cases, we were able to achieve a few percentage extra
 One of the best ways to kill mutants that we found was to increase our boundary testing. A large portion of surviving mutants related to incrementing or decrementing values by 1, thus the solution was to add test cases with the functions receiving similar values that were up to one integer apart. This alone gained a few percent in the mutation test strength. 
 
 The main method to find how to make tests to kill more mutants was to look through the results of mutation testing and find areas in which not many mutants had been successfully killed. Then, we wrote up new tests that more specifically pandered to the mutants that were surviving.
+
+Ultimately, we found more effectiveness from test cases which tested really close-together boundaries and shared a wide array of positive and negative values. This way, the very popular amount of mutants involving incrementation, decrementation, and negation were easily caught and killed.
 
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
@@ -246,9 +249,11 @@ As required by the project all members were present during both mutation and GUI
 # Difficulties encountered, challenges overcome, and lessons learned
 Throughout the lab there were quite a few difficulties with both the mutation testing and web GUI testing.
 
-[mutation difficulties]
+We had difficulties with mutation testing especially around equivalent mutants and similar mutants. The best we could do was try to further boundary test our program which covered for a lot of types of mutants but some mutants just seemed impossible to catch and we didn't know whether or not they were until we tried to. Additionally, even on high-end PCs the mutation testing takes a while to run which made trying to increase mutation test stregnth a difficult and inefficient task. We learnt, ultimately, that there is a lot more minor changes than we think that can easily get through without being noticed. 
 
 For the GUI Testing we encountered quite a few difficulties with testing the Costco website with the Selenium IDE. Selenium verify commands were a bit difficult to get working properly since in some cases it can be difficult to tell what element you need to select or if you're trying to read a value or a text. Some of our members have limited experience with HTML so but even for those who did have experience it was difficult to get some assertions to work properly. In addition, the scope of what we were actually able to test using the Selenium IDE was pretty heavily limited both by the IDE and by the site being tested being an actual live site. We could not automate test creation of accounts because that would require actually creating accounts and would not have a way to reset it to make the test repeatable and we could not test form submissions because it would actually submit the forms to Costco. Because of this our test cases were focused on a few smaller subsections of the site.
 
 # Comments/feedback on the lab itself
-[stuff]
+The lab was a well-made dive into the world of testing. At first, mutation testing seemed like just an extra way to catch bugs that go through, but it proved to be quite massive and extensive with how much is applied to the program and how much actually survives.
+
+Additionally, it was very interesting to see how GUI testing could just be run on any independent website and write scripts to automate tests.
