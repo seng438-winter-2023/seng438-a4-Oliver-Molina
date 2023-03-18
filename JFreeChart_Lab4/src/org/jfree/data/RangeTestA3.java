@@ -545,6 +545,11 @@ public class RangeTestA3 {
     	assertEquals(-2108162048, hash);
     }
     
+    @Test
+    public void toStringIsCorrect() {
+    	assertEquals("Range[-1.0,1.0]",range1.toString());
+    }
+    
     @After
     public void tearDown() throws Exception {
     }
