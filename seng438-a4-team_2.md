@@ -2,11 +2,11 @@
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
-| Group \#:      |     |
+| Group \#2:      |     |
 | -------------- | --- |
 | Student Names: |     |
-|      Oliver Molina          |     |
-|                |     |
+|     Oliver Molina   |     |
+|      Quentin Jennings   |     |
 |                |     |
 
 # Introduction
@@ -226,12 +226,14 @@ For the purposes of testing the Costco website we had to perform set-up for each
 Selenium checks individual elements and properties of a page with assertion commands while Sikulix captures an image screenshot of the page and compares it to the current page to validate a web page GUI's state. Both IDEs have their advantages and disadvantages: to start, Sikulix is able to capture and interact with elements that arent present within the page's code itself such as HTML5 elements or embeds like games or videos while Selenium can't as it is restricted to interacting with page elements within the website's HTML code. In terms of script capturing, both have a very similar workflow with the main difference coming in the assertions: Selenium must assert individual elements and often elements can be hard to access or hidden behind other elements whereas Sikulix's screen capture is able to identify GUI components on its own without human selection. However, the image processing could be inaccurate or elements could be blocked and unable to be captured by it whereas Selenium is much more explicit with what it asks for.
 
 # How the team work/effort was divided and managed
--equally (lul)
+As required by the project all members were present during both mutation and GUI testing. Using the same pair-testing approach as previous assignments, we split up into two pairs, which each did their individual work before all meeting up to check over each other's work. All members were involved in all stages of the project and each member performed a sizeable and equal amount of work.
 
 # Difficulties encountered, challenges overcome, and lessons learned
-GUI
--selecting elements / selenium assertions can be difficult to get working properly
--inability to test certain features, ex login or anything that submits a form (the site is live!!!)
+Throughout the lab there were quite a few difficulties with both the mutation testing and web GUI testing.
+
+[mutation difficulties]
+
+For the GUI Testing we encountered quite a few difficulties with testing the Costco website with the Selenium IDE. Selenium verify commands were a bit difficult to get working properly since in some cases it can be difficult to tell what element you need to select or if you're trying to read a value or a text. Some of our members have limited experience with HTML so but even for those who did have experience it was difficult to get some assertions to work properly. In addition, the scope of what we were actually able to test using the Selenium IDE was pretty heavily limited both by the IDE and by the site being tested being an actual live site. We could not automate test creation of accounts because that would require actually creating accounts and would not have a way to reset it to make the test repeatable and we could not test form submissions because it would actually submit the forms to Costco. Because of this our test cases were focused on a few smaller subsections of the site.
 
 # Comments/feedback on the lab itself
-:thumb:
+[stuff]

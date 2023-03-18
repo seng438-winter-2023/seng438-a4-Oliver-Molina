@@ -437,6 +437,13 @@
         ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "51bf4fa4-12e6-499a-b7cd-0d759eba5ff3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#empty-cart-id > .body-copy",
+      "targets": [],
+      "value": "Your shopping cart is empty. Please add at least one item to your cart before checking out."
     }]
   }, {
     "id": "df8f9be8-8e45-470e-92f4-8a2d55a4be6f",
