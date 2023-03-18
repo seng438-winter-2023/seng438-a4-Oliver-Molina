@@ -501,6 +501,50 @@ public class RangeTestA3 {
     	assertEquals(-31457280,range1.hashCode());
     }
     
+    @Test
+    public void HashTestPos() {
+    	Range tr = new Range(1,2);
+    	int hash = tr.hashCode();
+    	assertEquals(2117074944, hash);
+    }
+    
+    @Test
+    public void HashTestPosNeg() {
+    	Range tr = new Range(-10,10);
+    	int hash = tr.hashCode();
+    	assertEquals(70778880, hash);
+    }
+    
+    @Test
+    public void HashTestNeg() {
+    	Range tr = new Range(-10,-1);
+    	int hash = tr.hashCode();
+    	assertEquals(-2080112640, hash);
+    }
+    
+    @Test
+    public void HashTestMatchingZero() {
+    	Range tr = new Range(0,0);
+    	int hash = tr.hashCode();
+    	assertEquals(0, hash);
+    }
+    
+    @Test
+    public void HashTestEqualPos() {
+    	Range tr = new Range(5,5);
+    	int hash = tr.hashCode();
+    	System.out.println(hash);
+    	assertEquals(-2108162048, hash);
+    }
+    
+    @Test
+    public void HashTestEqualNeg() {
+    	Range tr = new Range(-5,-5);
+    	int hash = tr.hashCode();
+    	System.out.println(hash);
+    	assertEquals(-2108162048, hash);
+    }
+    
     @After
     public void tearDown() throws Exception {
     }
