@@ -155,8 +155,18 @@ With this, the lower or upper variable are negated. This would make the the larg
 ## RangeA4
 ![](./RangePIT2.png)
 
+## DataUtilitiesA3
+![](./DUPITa3.png)
+
+## DataUtilitiesA4
+Increasing the strength and coverage for this test is very difficult. Because it is already at 90%, increasing it further not only requires making many specific tests for a select few outlier surviving mutants, but also implies that we approach 100% mutant coverage and kill rate, which is nearly impossible, as some mutants, such as equivalent mutants, are hard to detect and make a case that will properly kill them.
+
+Throughout some extra test cases, we were able to achieve a few percentage extra, but were ultimately unable to kill off some mutants no matter what we tried. We believe or estimate that we could possibly go for 97 or possibly 98 percent, but striving for 100% is nearly impossible with some of the injected mutants in our program.
+
 # Analysis drawn on the effectiveness of each of the test classes
 One of the best ways to kill mutants that we found was to increase our boundary testing. A large portion of surviving mutants related to incrementing or decrementing values by 1, thus the solution was to add test cases with the functions receiving similar values that were up to one integer apart. This alone gained a few percent in the mutation test strength. 
+
+The main method to find how to make tests to kill more mutants was to look through the results of mutation testing and find areas in which not many mutants had been successfully killed. Then, we wrote up new tests that more specifically pandered to the mutants that were surviving.
 
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy

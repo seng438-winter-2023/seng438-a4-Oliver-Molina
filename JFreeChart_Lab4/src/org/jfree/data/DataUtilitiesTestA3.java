@@ -771,6 +771,110 @@ public class DataUtilitiesTestA3 extends DataUtilities {
 	
 	// we can explain the last 3 as "testing what happens with invalid row/col/item counts" or some bs
 	
+	// MUTATION TESTS
+	@Test 
+	public void equalClose() {
+		double[][] t1 = {{1,1},{1,1}};
+		double[][] t2 = {{1,2},{1,1}};
+		assertTrue(!DataUtilities.equal(t1, t2));
+	}
+	
+	@Test
+	public void cloneNull() {
+		double[][] t1 = null;
+		boolean err = false;
+		try {
+			DataUtilities.clone(t1);
+		} catch (IllegalArgumentException e) {
+			err = true;
+		} catch (Exception f) {
+			
+		}
+		assertTrue(err);
+	}
+	
+	@Test
+	public void calcColTotMutant() {
+		// setup
+		Mockery mockcntxt  = new Mockery();
+		final Values2D val = mockcntxt.mock(Values2D.class);
+		mockcntxt.checking(new Expectations() {
+		    {
+		         one(val).getRowCount();
+		         will(returnValue(2));
+		         one(val).getValue(0, 0);
+		         will(returnValue(1.1));
+		         one(val).getValue(1, 0);
+		         will(returnValue(1.2));
+		    }
+		});
+		// test
+		double result = DataUtilities.calculateColumnTotal(val,0);
+		assertEquals("CalculateColumnTotal should return 10 but instead returned" + result, 2.3, result, .000000001d);
+	}
+	
+	@Test
+	public void calColTotValidMutant() {
+		// setup
+		Mockery mockcntxt  = new Mockery();
+		final Values2D val = mockcntxt.mock(Values2D.class);
+		mockcntxt.checking(new Expectations() {
+		    {
+		    	one(val).getRowCount();
+		         will(returnValue(2));
+		         one(val).getValue(0, 0);
+		         will(returnValue(1.1));
+		         one(val).getValue(1, 0);
+		         will(returnValue(1.2));
+		    }
+		});
+		// test
+		int[] validrows = {0, 1};
+		double result = DataUtilities.calculateColumnTotal(val,0,validrows);
+		assertEquals("CalculateColumnTotal should return 8.5 but instead returned" + result, 2.3, result, .000000001d);
+	}
+	
+	@Test
+	public void calcRowTotMutant() {
+		// setup
+		Mockery mockcntxt  = new Mockery();
+		final Values2D val = mockcntxt.mock(Values2D.class);
+		mockcntxt.checking(new Expectations() {
+		    {
+		         one(val).getColumnCount();
+		         will(returnValue(2));
+		         one(val).getValue(0, 0);
+		         will(returnValue(1.1));
+		         one(val).getValue(0, 1);
+		         will(returnValue(1.2));
+		    }
+		});
+		// test
+		double result = DataUtilities.calculateRowTotal(val,0);
+		assertEquals("CalculateRowTotal should return 10 but instead returned" + result, 2.3, result, .000000001d);
+	}
+	
+	@Test
+	public void calRowTotValidMutant() {
+		// setup
+		Mockery mockcntxt  = new Mockery();
+		final Values2D val = mockcntxt.mock(Values2D.class);
+		mockcntxt.checking(new Expectations() {
+		    {
+		    	one(val).getColumnCount();
+		         will(returnValue(2));
+		         one(val).getValue(0, 0);
+		         will(returnValue(1.1));
+		         one(val).getValue(0, 1);
+		         will(returnValue(1.2));
+		    }
+		});
+		// test
+		int[] validcols = {0, 1};
+		double result = DataUtilities.calculateRowTotal(val,0,validcols);
+		assertEquals("CalculateRowTotal should return 8.5 but instead returned" + result, 2.3, result, .000000001d);
+	}
+	
 	@After
 	public void tearDown() throws Exception {
 	}
