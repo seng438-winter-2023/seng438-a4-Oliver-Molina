@@ -153,6 +153,8 @@ With this, the lower or upper variable are negated. This would make the the larg
 ![](./DataUtilitiesPITSummary.png)
 
 # Analysis drawn on the effectiveness of each of the test classes
+One of the best ways to kill mutants that we found was to increase our boundary testing. A large portion of surviving mutants related to incrementing or decrementing values by 1, thus the solution was to add test cases with the functions receiving similar values that were up to one integer apart. This alone gained a few percent in the mutation test strength. 
+
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 The effect of equivalent mutants has been to significantly decrease the mutation score of each of our test classes reducing the accuracy greatly. There are many surviving mutants where we can see that the function output is exactly identitical and a few possible methods for detecting equivalent mutants are as follow.
