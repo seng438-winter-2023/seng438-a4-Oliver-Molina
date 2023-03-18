@@ -149,7 +149,8 @@ With this, the lower or upper variable are negated. This would make the the larg
 
 # Report all the statistics and the mutation score for each test class
 
-
+![](./RangePITSummary.png)
+![](./DataUtilitiesPITSummary.png)
 
 # Analysis drawn on the effectiveness of each of the test classes
 
