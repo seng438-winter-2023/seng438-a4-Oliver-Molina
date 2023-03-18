@@ -149,8 +149,11 @@ With this, the lower or upper variable are negated. This would make the the larg
 
 # Report all the statistics and the mutation score for each test class
 
+## RangeA3
 ![](./RangePITSummary.png)
-![](./DataUtilitiesPITSummary.png)
+
+## RangeA4
+![](./RangePIT2.png)
 
 # Analysis drawn on the effectiveness of each of the test classes
 One of the best ways to kill mutants that we found was to increase our boundary testing. A large portion of surviving mutants related to incrementing or decrementing values by 1, thus the solution was to add test cases with the functions receiving similar values that were up to one integer apart. This alone gained a few percent in the mutation test strength. 
