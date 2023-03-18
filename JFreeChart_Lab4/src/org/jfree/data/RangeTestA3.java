@@ -1,17 +1,10 @@
 package org.jfree.data;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.security.InvalidParameterException;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 public class RangeTestA3 {
 	private Range range1;
@@ -403,30 +396,21 @@ public class RangeTestA3 {
     	Range expectedRange = new Range(2, 8);
     	assertTrue("The range did not properly expand the upper bound.", newRange.equals(expectedRange));
     }
-    /*// REMOVED FOR MUTATION GREEN TEST SUITE
-    @Test //(expected = InvalidParameterException.class)
+    // REMOVED FOR MUTATION GREEN TEST SUITE
+    @Test (expected = IllegalArgumentException.class)
     public void ExpandThrowsException() {
-    	boolean correctExThrown = false;
-    	try {
-    		Range.expand(null, 2, 6);
-    	}
-    	catch(InvalidParameterException e) {
-    		correctExThrown = true;
-    	}catch(Exception f) {
-    		
-    	}
-    	assertTrue(correctExThrown);
+    	Range.expand(null, 2, 6);
     }
-    */
-    /*// REMOVED FOR MUTATION GREEN TEST SUITE
+    
+    // REMOVED FOR MUTATION GREEN TEST SUITE
     @Test
     public void ExpandWithNegative() {
     	Range testRange = Range.expand(range1, -2, 0);
-    	assertEquals(1,testRange.getLowerBound(),0.000000001d);
-    	assertEquals(3,testRange.getUpperBound(),0.000000001d);
+    	assertEquals(2,testRange.getLowerBound(),0.000000001d);
+    	assertEquals(2,testRange.getUpperBound(),0.000000001d);
     	
     }
-    */
+    
     
     // Testing method scale(Range base, double factor)
     
@@ -439,20 +423,24 @@ public class RangeTestA3 {
     
     @Test (expected = IllegalArgumentException.class)
     public void ScaledRangeShouldThrowExceptionForNegative() {
+    	
     	Range newRange = Range.scale(range1, -1);
+    	
+    	
     }
     
-    /*// REMOVED FOR MUTATION GREEN TEST SUITE
+    // REMOVED FOR MUTATION GREEN TEST SUITE
     // Testing method shift(Range base, double delta)
     @Test
     public void ShiftShouldNotPassZeroDefault() {
-    	Range newRange = Range.shift(range2, 11);
-    	assertEquals(range2,newRange);
+    	Range testRange = new Range(0, 10);
+    	Range newRange = Range.shift(range2, 10);
+    	assertEquals(testRange,newRange);
     	
     }
-    */
     
-    /*// REMOVED FOR MUTATION GREEN TEST SUITE
+    
+    // REMOVED FOR MUTATION GREEN TEST SUITE
     // Testing method shift(Range base, double delta, boolean allowZeroCrossing)
     @Test
     public void ShiftShouldPassZero() {
@@ -460,21 +448,22 @@ public class RangeTestA3 {
     	Range newRange = Range.shift(range2, 11,true);
     	assertEquals(testRange,newRange);
     }
-    */
     
-    /*// REMOVED FOR MUTATION GREEN TEST SUITE
+   
+    // REMOVED FOR MUTATION GREEN TEST SUITE
     // Testing method shiftWithNoZeroCrossing(double value, double delta)
     @Test
     public void ShiftShouldNotPassZero() {
+    	Range testRange = new Range(-30, 0);
     	Range newRange = Range.shift(range4, -20);
-    	assertEquals(range4,newRange);
+    	assertEquals(testRange,newRange);
     }
-    */
+    
     
     // Testing method hashCode()
     @Test
     public void HashCodeShouldBeConsistent() {
-    	assertEquals(range1.hashCode(),range1.hashCode());
+    	assertEquals(-31457280,range1.hashCode());
     }
     
     @After
