@@ -141,6 +141,10 @@ public class RangeTestA3 {
     public void CombinedNaNRangeShouldBeRange2() {
     	assertEquals(range2,Range.combineIgnoringNaN(null,range2));
     }
+    @Test
+    public void CombinedNaNRangeShouldBeRange1() {
+    	assertEquals(range1,Range.combineIgnoringNaN(range1,null));
+    }
     
     /*
      * Testing to confirm that null is returned for two null arguments
@@ -403,6 +407,37 @@ public class RangeTestA3 {
     	Range expectedRange = new Range(2, 8);
     	assertTrue("The range did not properly expand the upper bound.", newRange.equals(expectedRange));
     }
+    
+    // MUTATION TESTS
+    @Test 
+    public void ExpandPercBySmallMargin() throws Exception {
+    	Range tr = new Range(1,2);
+    	Range tr2 = Range.expand(tr, 0.25, 0.1);
+    	Range er = new Range(0.75, 2.1);
+    	assertTrue("The range did not properly expand.", tr2.equals(er));
+    }
+    @Test 
+    public void ExpandUpperBySmallMargin() throws Exception {
+    	Range tr = new Range(1,2);
+    	Range tr2 = Range.expandToInclude(tr, 2.1);
+    	Range er = new Range(1, 2.1);
+    	assertTrue("The range did not properly expand.", tr2.equals(er));
+    }
+    @Test 
+    public void ExpandLowerBySmallMargin() throws Exception {
+    	Range tr = new Range(1,2);
+    	Range tr2 = Range.expandToInclude(tr, 0.9);
+    	Range er = new Range(0.9, 2);
+    	assertTrue("The range did not properly expand.", tr2.equals(er));
+    }
+    @Test 
+    public void ExpandMiddle() throws Exception {
+    	Range tr = new Range(1,2);
+    	Range tr2 = Range.expandToInclude(tr, 1.5);
+    	Range er = new Range(1, 2);
+    	assertTrue("The range did not properly expand.", tr2.equals(er));
+    }
+    
     /*// REMOVED FOR MUTATION GREEN TEST SUITE
     @Test //(expected = InvalidParameterException.class)
     public void ExpandThrowsException() {
